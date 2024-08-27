@@ -2,6 +2,8 @@
 Kia ora, I'm Mandy, Welcome to my portfolio! It's currently a WIP. *//TODO update to LIVE :D* 
 I am building my portfolio using `React` with the `Next.JS` framework. I wanted to use some nice transitions and interactions, so I thought I would try out `Framer Motion` to help me with this goal. I am using `Tailwind` and `TypeScript` because I love them both. Tailwind because life is just easier and Typescript because I find it so helpful for knowing what I'm working with, debugging and just the certainty it gives me!
 
+Check out my design system and iterations on my [figma board](https://www.figma.com/design/YaRmZ4BDOTjNEGMzDRS5rD/Personal-portfolio?node-id=101-2&t=USmmS12btUiBAGCK-1) - it's ever-evolving but I've enjoyed using this project to practice building a design system and iterating on my own porfolio design using Figma as a tool!
+
 ## Getting Started
 
 First, run the development server:
