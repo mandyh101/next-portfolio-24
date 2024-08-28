@@ -4,23 +4,25 @@
 
 /* global styles */
 
-h1{
-  @apply font-sans text-4xl;
-}
 
-h2{
-  @apply font-sans text-2xl;
-}
+  h1{
+    @apply font-sans text-4xl;
+  }
+  
+  h2{
+    @apply font-sans text-2xl;
+  }
+  
+  h3{
+    @apply font-sans text-xl;
+  }
+  
+  h4{
+    @apply font-sans uppercase;
+  }
+  
+  p {
+    @apply font-serif text-lg;
+  }
+  /* add p-reg(large class) and p-sm (smaller paragraph text) or customise font sizes to be bigger! */
 
-h3{
-  @apply font-sans text-xl;
-}
-
-h4{
-  @apply font-sans uppercase;
-}
-
-p {
-  @apply font-serif text-lg;
-}
-/* add p-reg(large class) and p-sm (smaller paragraph text) or customise font sizes to be bigger! */

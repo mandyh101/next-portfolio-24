@@ -1,5 +1,9 @@
 import type { Config } from "tailwindcss";
 
+//convert SVG code to a data URI so it can be embeded in CSS directly as bg images/icons
+// without needing to load a separate file
+const svgToDataUri = require("mini-svg-data-uri")
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -29,42 +33,59 @@ const config: Config = {
           '800': '#0a6465',
           '900': '#0d5454',
           '950': '#003033', // headings and text with some pizazz
+        },
+        // secondary
+        'aquamarine': {
+          '50': '#eafff8',
+          '100': '#ccffeb',
+          '200': '#9efcdc',
+          '300': '#60f5cc', //default
+          '400': '#21e6b6', //hover
+          '500': '#00cda1', //active
+          '600': '#00a784', //probably never use
+        },
+        //accent
+        'tropical-indigo': {
+          '50': '#f6f6fd',
+          '100': '#eff0fc',
+          '200': '#e1e3f9',
+          '300': '#c9caf4',
+          '400': '#a9a8eb',
+          '500': '#a09be7', //default
+          '600': '#8477da', //hover
+          '700': '#6e5ec8', //active
+          '800': '#5240b5',
+          '900': '#443695',
+          '950': '#282164',
+        },
+        // greys
+        'mono-grey': {
+            '50': '#F8F9FA',
+            '100': '#DDE2E5',
+            '200': '#ACB5BD',
+            '300': '#495057',
+            '400': '#212429',
+        }
       },
-      // secondary
-      'aquamarine': {
-        '50': '#eafff8',
-        '100': '#ccffeb',
-        '200': '#9efcdc',
-        '300': '#60f5cc', //default
-        '400': '#21e6b6', //hover
-        '500': '#00cda1', //active
-        '600': '#00a784', //probably never use
+      animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
-      //accent
-      'tropical-indigo': {
-        '50': '#f6f6fd',
-        '100': '#eff0fc',
-        '200': '#e1e3f9',
-        '300': '#c9caf4',
-        '400': '#a9a8eb',
-        '500': '#a09be7', //default
-        '600': '#8477da', //hover
-        '700': '#6e5ec8', //active
-        '800': '#5240b5',
-        '900': '#443695',
-        '950': '#282164',
-    },
-    // greys
-    'mono-grey': {
-        '50': '#F8F9FA',
-        '100': '#DDE2E5',
-        '200': '#ACB5BD',
-        '300': '#495057',
-        '400': '#212429',
-    }
-      }
+      keyframes: {
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate"),
+  ],
 };
 export default config;
