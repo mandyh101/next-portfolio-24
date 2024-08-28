@@ -1,6 +1,8 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
+import ButtonPrimary from './ui/ButtonPrimary'
+import { FaArrowRight } from "react-icons/fa6";
 
 function HeroSpotlight() {
 
@@ -15,13 +17,24 @@ function HeroSpotlight() {
       </div>
       <div className='flex justify-center relative my-16 z-10'>
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-          <h1 className="font-sans font-bold text-center text-[40px] md:text-4xl lg:text-5xl max-w-80 md:max-w-md lg:max-w-xl">
-            {/* Provide accessible option for heading level 1 text */}
-            <span aria-hidden="true">
-              <TextGenerateEffect words={headingText} />
-            </span>
-            <span className='sr-only'>{headingText}</span>
-          </h1>
+          <div className='flex flex-col space-y-4  md:max-w-lg lg:max-w-xl items-center'>
+            <h1 className="font-sans font-bold text-center text-[40px] md:text-4xl lg:text-5xl">
+              {/* Provide accessible option for heading level 1 text */}
+              <span aria-hidden="true">
+                <TextGenerateEffect words={headingText} />
+              </span>
+              <span className='sr-only'>{headingText}</span>
+            </h1>
+            <p className='text-center text-mono-grey-300 font-light'
+            >
+              Kia ora, I&apos;m Mandy – here to create accessible, elegant, and efficient web applications with a user-centered approach.
+            </p>
+            <ButtonPrimary 
+            title='Learn more'
+            icon={<FaArrowRight />}
+            isRotatingIcon
+            />
+          </div>
         </div>
       </div>
     </div>
