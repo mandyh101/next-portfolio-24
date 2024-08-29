@@ -31,16 +31,11 @@ function HeroSpotlight() {
               Kia ora, I&apos;m Mandy – here to create accessible, elegant, and efficient web applications with a user-centered approach.
             </p>
             <SocialLinks />
-            {/* <a href="#section-two"> */}
               <ButtonPrimary
               title='Learn more'
               icon={<FaArrowRight />}
               isRotatingIcon
               />
-            {/* </a> */}
-          </div>
-          <div id='section-two'>
-            You made it
           </div>
         </div>
       </div>
