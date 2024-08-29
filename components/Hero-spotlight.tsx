@@ -7,7 +7,7 @@ import SocialLinks from './ui/SocialLinks';
 
 function HeroSpotlight() {
 
-  const headingText = "Full stack web developer, innovator, and ocean lover."
+  const headingText = "Full-stack web developer, innovator, and ocean lover."
   return (
     <div className='pb-24 pt-40'>
       <div>
