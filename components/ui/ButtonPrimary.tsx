@@ -16,7 +16,7 @@ const ButtonPrimary = ({
 }) => {
   return (
       <>
-        <button className={`font-sans font-medium w-full sm:w-60 overflow-hidden text-center px-4 py-2 rounded-lg bg-tropical-indigo-500 text-night tracking-wide text-base hover:-translate-y-1 hover:bg-tropical-indigo-600 transform transition duration-200 hover:shadow-md uppercase active:bg-tropical-indigo-700 group flex justify-center items-center gap-2 ${otherClasses}`}
+        <button className={`font-sans font-medium w-full sm:w-60 overflow-hidden text-center px-4 py-2 rounded-lg bg-tropical-indigo-500 text-night tracking-wide text-base hover:-translate-y-1 hover:bg-tropical-indigo-600 transform transition duration-500 hover:shadow-md uppercase active:bg-tropical-indigo-700 group flex justify-center items-center gap-2 ${otherClasses}`}
         >
           {title}
           {icon && (
