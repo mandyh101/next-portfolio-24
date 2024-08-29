@@ -3,6 +3,7 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import ButtonPrimary from './ui/ButtonPrimary'
 import { FaArrowRight } from "react-icons/fa6";
+import SocialLinks from './ui/SocialLinks';
 
 function HeroSpotlight() {
 
@@ -29,6 +30,7 @@ function HeroSpotlight() {
             >
               Kia ora, I&apos;m Mandy – here to create accessible, elegant, and efficient web applications with a user-centered approach.
             </p>
+            <SocialLinks />
             <ButtonPrimary 
             title='Learn more'
             icon={<FaArrowRight />}
