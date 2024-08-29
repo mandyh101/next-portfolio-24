@@ -1,6 +1,7 @@
 import HeroWave from "@/components/Hero-wave";
 import HeroSpotlight from "@/components/Hero-spotlight";
 import { FloatingNav } from "@/components/ui/FloatingNav";
+import AboutMeGrid from "@/components/AboutMeGrid";
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingNav  navItems={navItems}/>
         <HeroSpotlight />
+        <AboutMeGrid />
         {/* <HeroWave /> */}
       </div>
     </main>
