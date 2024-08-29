@@ -18,7 +18,7 @@ function HeroSpotlight() {
       </div>
       <div className='flex justify-center relative my-16 z-10'>
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-          <div className='flex flex-col space-y-4  md:max-w-lg lg:max-w-xl items-center mb-64'>
+          <div className='flex flex-col space-y-4  md:max-w-lg lg:max-w-xl items-center'>
             <h1 className="font-sans font-bold text-center text-[40px] md:text-4xl lg:text-5xl">
               {/* Provide accessible option for heading level 1 text */}
               <span aria-hidden="true">
