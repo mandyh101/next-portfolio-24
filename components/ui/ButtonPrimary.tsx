@@ -18,7 +18,7 @@ const ButtonPrimary = ({
 
   // TODO make this dynamic / pass in a prop to determine the target element
   const handleClick = () => {
-    const targetElement = document.getElementById('section-two');
+    const targetElement = document.getElementById('me');
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
