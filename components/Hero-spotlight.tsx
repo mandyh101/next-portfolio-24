@@ -7,7 +7,7 @@ import SocialLinks from './ui/SocialLinks';
 
 function HeroSpotlight() {
 
-  const headingText = "Full-stack web developer, innovator, and ocean lover."
+  const headingText: string  = "Full-stack web developer, innovator, and ocean lover."
   return (
     <div className='pb-24 pt-40'>
       <div>
@@ -18,7 +18,7 @@ function HeroSpotlight() {
       </div>
       <div className='flex justify-center relative my-16 z-10'>
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-          <div className='flex flex-col space-y-4  md:max-w-lg lg:max-w-xl items-center'>
+          <div className='flex flex-col space-y-4  md:max-w-lg lg:max-w-xl items-center mb-64'>
             <h1 className="font-sans font-bold text-center text-[40px] md:text-4xl lg:text-5xl">
               {/* Provide accessible option for heading level 1 text */}
               <span aria-hidden="true">
@@ -31,11 +31,16 @@ function HeroSpotlight() {
               Kia ora, I&apos;m Mandy – here to create accessible, elegant, and efficient web applications with a user-centered approach.
             </p>
             <SocialLinks />
-            <ButtonPrimary 
-            title='Learn more'
-            icon={<FaArrowRight />}
-            isRotatingIcon
-            />
+            {/* <a href="#section-two"> */}
+              <ButtonPrimary
+              title='Learn more'
+              icon={<FaArrowRight />}
+              isRotatingIcon
+              />
+            {/* </a> */}
+          </div>
+          <div id='section-two'>
+            You made it
           </div>
         </div>
       </div>
