@@ -26,3 +26,10 @@
   }
   /* add p-reg(large class) and p-sm (smaller paragraph text) or customise font sizes to be bigger! */
 
+.bentoGridItem {
+  @apply rounded-xl hover:shadow-xl transition duration-200 dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4;
+}
+
+.bentoGridItemInner{
+  @apply  group-hover:translate-x-2 transition duration-200
+}
