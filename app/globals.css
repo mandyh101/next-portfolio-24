@@ -28,7 +28,7 @@
   /* add p-reg(large class) and p-sm (smaller paragraph text) or customise font sizes to be bigger! */
 
 .bentoGridItem {
-  @apply rounded-xl hover:shadow-xl transition duration-200 shadow-none p-8 dark:border-white/[0.2] border border-transparent justify-center flex flex-col;
+  @apply rounded-xl hover:shadow-xl transition duration-200 shadow-none p-8 dark:border-white/[0.2] border border-transparent;
 }
 
 .bentoGridItemInner{
