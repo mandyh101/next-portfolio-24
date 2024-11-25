@@ -1,25 +1,26 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 //convert SVG code to a data URI so it can be embeded in CSS directly as bg images/icons
 // without needing to load a separate file
-const svgToDataUri = require("mini-svg-data-uri")
+const svgToDataUri = require('mini-svg-data-uri')
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-raleway)', 'sans-serif'],
-        serif: ['var(--font-roboto-slab)', 'serif'],
+        sans: [`var(--font-raleway)`, ...defaultTheme.fontFamily.sans],
+        serif: [`var(--font-roboto-slab)`, ...defaultTheme.fontFamily.serif],
       },
       colors: {
         // colour scales created at https://uicolors.app/create
         'seasalt-white': '#F7F6F6',
-        'night': '#0B0c10',
+        night: '#0B0c10',
         // primary
         'sea-green': {
           '50': '#effefc',
@@ -29,13 +30,13 @@ const config: Config = {
           '400': '#1de4da',
           '500': '#04c8c1', //default
           '600': '#009f9d', //hover
-          '700': '#05807f',//active
+          '700': '#05807f', //active
           '800': '#0a6465',
           '900': '#0d5454',
           '950': '#003033', // headings and text with some pizazz
         },
         // secondary
-        'aquamarine': {
+        aquamarine: {
           '50': '#eafff8',
           '100': '#ccffeb',
           '200': '#9efcdc',
@@ -60,32 +61,30 @@ const config: Config = {
         },
         // greys
         'mono-grey': {
-            '50': '#F8F9FA',
-            '100': '#DDE2E5',
-            '200': '#ACB5BD',
-            '300': '#495057',
-            '400': '#212429',
-        }
+          '50': '#F8F9FA',
+          '100': '#DDE2E5',
+          '200': '#ACB5BD',
+          '300': '#495057',
+          '400': '#212429',
+        },
       },
       animation: {
-        spotlight: "spotlight 2s ease .75s 1 forwards",
+        spotlight: 'spotlight 2s ease .75s 1 forwards',
       },
       keyframes: {
         spotlight: {
-          "0%": {
-            opacity: "0",
-            transform: "translate(-72%, -62%) scale(0.5)",
+          '0%': {
+            opacity: '0',
+            transform: 'translate(-72%, -62%) scale(0.5)',
           },
-          "100%": {
-            opacity: "1",
-            transform: "translate(-50%,-40%) scale(1)",
+          '100%': {
+            opacity: '1',
+            transform: 'translate(-50%,-40%) scale(1)',
           },
         },
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-  ],
-};
-export default config;
+  plugins: [require('tailwindcss-animate')],
+}
+export default config

@@ -4,13 +4,14 @@
 
 /* global styles */
 
+@layer base {
 
   h1{
-    @apply font-sans text-4xl;
+    @apply font-sans text-5xl md:text-6xl; 
   }
   
   h2{
-    @apply font-sans text-2xl;
+    @apply font-sans text-2xl md:text-3xl;
   }
   
   h3{
@@ -22,14 +23,15 @@
   }
   
   p {
-    @apply font-serif text-lg;
+    @apply font-serif text-lg font-bold;
   }
   /* add p-reg(large class) and p-sm (smaller paragraph text) or customise font sizes to be bigger! */
 
 .bentoGridItem {
-  @apply rounded-xl hover:shadow-xl transition duration-200 dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4;
+  @apply rounded-xl hover:shadow-xl transition duration-200 shadow-none p-8 dark:border-white/[0.2] border border-transparent justify-center flex flex-col;
 }
 
 .bentoGridItemInner{
-  @apply  group-hover:translate-x-2 transition duration-200
+  @apply  group-hover:translate-x-0.5 transition duration-200
+}
 }
