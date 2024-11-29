@@ -14,32 +14,26 @@ const AboutMeGrid = () => {
         <span className="text-sea-green-800"> me</span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-8 md:grid-rows-[auto_auto_auto_auto]">
-        {/* Availability - Narrow box */}
-        <div className="bentoGridItem md:col-span-1 group border-2 border-aquamarine-500 bg-gradient-to-br from-aquamarine-50 to-transparent">
+        <div className="bentoGridItem md:col-span-1 group bg-gradient-to-br from-aquamarine-50 to-transparent md:flex md:justify-center md:items-center">
           <Availability />
         </div>
 
-        {/* Goal - Standard box */}
         <div className="bentoGridItem md:col-span-3 lg:col-span-2 group bg-aquamarine-100 hover:bg-aquamarine-200 transition-colors">
           <Goal />
         </div>
 
-        {/* Work Experience - Tall box with tech stack */}
         <div className="bentoGridItem md:col-span-4 lg:col-span-3 md:row-span-6 lg:row-span-3 group bg-gradient-to-br from-gray-50 to-transparent h-full min-h-[300px]">
           <WorkExperience />
         </div>
 
-        {/* Values - Wide box */}
         <div className="bentoGridItem md:col-span-2 lg:col-span-3 md:row-span-2 group bg-tropical-indigo-100 hover:bg-tropical-indigo-200 transition-colors h-full">
           <Values />
         </div>
 
-        {/* Location - Compact box */}
         <div className="bentoGridItem md:col-span-2 md:row-span-2 lg:col-span-3 group bg-sea-green-100 hover:bg-sea-green-200 transition-colors">
           <Location />
         </div>
 
-        {/* Interests - Wide feature box */}
         <div className="bentoGridItem md:col-span-2 md:row-span-4 lg:col-span-3 group min-h-[300px]">
           <Interests />
         </div>
