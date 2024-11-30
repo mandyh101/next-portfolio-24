@@ -27,6 +27,13 @@
   }
   /* add p-reg(large class) and p-sm (smaller paragraph text) or customise font sizes to be bigger! */
 
+  .section-padding{
+   @apply py-8 sm:py-10 md:py-12 lg:py-16
+  }
+
+  .section-container{
+    @apply max-w-7xl mx-auto 
+  }
 .bentoGridItem {
   @apply relative rounded-xl overflow-hidden hover:shadow-xl transition duration-200 shadow-none p-6 ;
 }
@@ -34,4 +41,10 @@
 .bentoGridItemInner{
   @apply  group-hover:translate-x-0.5 transition duration-200
 }
+}
+
+@layer utilities {
+  .no-visible-scrollbar {
+    @apply [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden;
+  }
 }
