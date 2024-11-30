@@ -9,7 +9,7 @@ function HeroSpotlight() {
   const headingText: string =
     'Full-stack web developer, innovator, and ocean lover.'
   return (
-    <div className="pb-24 pt-40">
+    <section className="pb-8 sm:pb-10 md:pb-12 lg:pb-16 pt-40">
       <div>
         {/*  */}
         <Spotlight
@@ -48,7 +48,7 @@ function HeroSpotlight() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
