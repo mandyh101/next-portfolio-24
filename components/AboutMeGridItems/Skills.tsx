@@ -29,20 +29,20 @@ const Skills = () => {
           {leftLists.map((item, i) => (
             <span
               key={i}
-              className="py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg border-2 border-sea-green-400 text-center bg-seasalt-white shadow-md hover:bg-sea-green-500 hover:text-seasalt-white"
+              className="py-2 px-2 text-xs opacity-50 
+                    lg:opacity-100 rounded-lg border-2 border-sea-green-400 text-center bg-seasalt-white shadow-md hover:bg-sea-green-500 hover:text-seasalt-white min-w-[110px]"
             >
               <p className="font-normal">{item}</p>
             </span>
           ))}
           <span className="py-4 px-3 rounded-lg text-center bg-sea-green-400"></span>
         </div>
-        <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
-          <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
+        <div className="flex flex-col gap-3 md:gap-3 lg:gap-4 max-h-[250px] lg:max-h-[300px]">
+          <span className="py-4 px-3 rounded-lg bg-sea-green-400"></span>
           {centerLists.map((item, i) => (
             <span
               key={i}
-              className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+              className="py-2 px-2 text-xs lg:text-base opacity-50 
                   lg:opacity-100 rounded-lg border-2 border-sea-green-400 text-center bg-seasalt-white shadow-md hover:bg-sea-green-500 hover:text-seasalt-white"
             >
               <p className="font-normal">{item}</p>
@@ -53,7 +53,7 @@ const Skills = () => {
           {rightLists.map((item, i) => (
             <span
               key={i}
-              className="py-2 px-3 text-xs lg:text-base opacity-50 
+              className="py-2 px-2 text-xs lg:text-base opacity-50 
                     lg:opacity-100 rounded-lg border-2 border-sea-green-400 text-center bg-seasalt-white shadow-md hover:bg-sea-green-500 hover:text-seasalt-white"
             >
               <p className="font-normal">{item}</p>
