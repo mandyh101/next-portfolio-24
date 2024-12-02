@@ -3,7 +3,9 @@ import { Tabs } from './ui/Tabs' // Adjust import path as needed
 
 interface Skill {
   name: string
-  level: number
+  level?: number
+  description?: string
+  icon?: React.ReactNode
 }
 
 interface SkillCategories {
@@ -15,7 +17,7 @@ interface TabContentProps {
 }
 
 const TabContent: React.FC<TabContentProps> = ({ skills }) => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4">
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
     {skills.map((skill) => (
       <div
         key={skill.name}
@@ -32,14 +34,6 @@ const TabContent: React.FC<TabContentProps> = ({ skills }) => (
                        group-hover:scale-125 transition-transform"
           />
         </div>
-
-        <div className="mt-2 h-1 bg-gray-100 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-sea-green-400 rounded-full transition-all duration-500 ease-out
-                       group-hover:opacity-80"
-            style={{ width: `${skill.level}%` }}
-          />
-        </div>
       </div>
     ))}
   </div>
@@ -54,20 +48,27 @@ const Skills: React.FC = () => {
       { name: 'JavaScript', level: 92 },
       { name: 'PHP', level: 80 },
       { name: 'Laravel', level: 82 },
-    ],
-    Design: [
-      { name: 'CSS', level: 90 },
+      { name: 'CSS (Tailwind, Sass)', level: 90 },
       { name: 'HTML', level: 95 },
       { name: 'Figma', level: 85 },
       { name: 'Tailwind', level: 92 },
     ],
-    'Soft Skills': [
-      { name: 'Agile project management', level: 88 },
-      { name: 'Communication', level: 95 },
-      { name: 'Big picture thinking', level: 90 },
-      { name: 'Empathy', level: 95 },
-      { name: 'Information gathering', level: 85 },
-      { name: 'Account management', level: 87 },
+    Human: [
+      { name: 'Excellent communicator', level: 90 },
+      { name: 'Go-getter', level: 85 },
+      { name: 'Change agent', level: 92 },
+      { name: 'Systems thinking', level: 92 },
+      { name: 'Agile project management', level: 92 },
+    ],
+    Learning: [
+      {
+        name: 'AI fundamentals',
+        description: 'AI for everyone - DeepLearning.AI',
+      }, //https://www.coursera.org/learn/ai-for-everyone?action=enroll
+      {
+        name: 'Green software practitioner',
+        description: 'The Green Software Foundation',
+      }, //https://learn.greensoftware.foundation/carbon-efficiency
     ],
   }
 
@@ -78,25 +79,19 @@ const Skills: React.FC = () => {
       content: <TabContent skills={skillCategories['Technical']} />,
     },
     {
-      title: 'Design',
-      value: 'design',
-      content: <TabContent skills={skillCategories['Design']} />,
+      title: 'Human',
+      value: 'human',
+      content: <TabContent skills={skillCategories['Human']} />,
     },
     {
-      title: 'Soft Skills',
-      value: 'soft-skills',
-      content: <TabContent skills={skillCategories['Soft Skills']} />,
+      title: 'Learning',
+      value: 'learning',
+      content: <TabContent skills={skillCategories['Learning']} />,
     },
-    // TODO add learning tab?
-    // {
-    //   title: 'Want to learn',
-    //   value: 'learning',
-    //   content: <TabContent skills={skillCategories['Want to learn']} />,
-    // },
   ]
 
   return (
-    <section className="section-container section-padding relative min-h-[650px] sm:min-h-[500px]">
+    <section className="section-container section-padding relative min-h-[500px]">
       <h2 className="font-light text-center my-8">
         My <span className="text-sea-green-800">skill</span> set
       </h2>
