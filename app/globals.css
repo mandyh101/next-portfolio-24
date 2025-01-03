@@ -28,7 +28,7 @@
   /* add p-reg(large class) and p-sm (smaller paragraph text) or customise font sizes to be bigger! */
 
   .section-padding{
-   @apply py-8 sm:py-10 md:py-12 lg:py-16
+   @apply py-8 sm:py-10 md:py-12 lg:py-14
   }
 
   .section-container{

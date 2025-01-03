@@ -22,9 +22,6 @@ const AboutMeGrid = () => {
           <Goal />
         </div>
 
-        {/* <div className="bentoGridItem md:col-span-4 lg:col-span-3 md:row-span-6 lg:row-span-3 group bg-gradient-to-br from-gray-50 to-transparent h-full min-h-[300px] md:min-h-[500px]">
-          <Skills />
-        </div> */}
         <div className="bentoGridItem md:col-span-4 lg:col-span-3 md:row-span-6 lg:row-span-3 group bg-gradient-to-br from-tropical-indigo-100 to-transparent">
           TBC
         </div>

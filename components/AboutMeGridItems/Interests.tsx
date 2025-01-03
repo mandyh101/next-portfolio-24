@@ -14,7 +14,7 @@ const Interests = () => {
       <div className="relative z-10 bentoGridItemInner">
         <h3 className="sr-only">Interests</h3>
         <p className="font-normal text-black">
-          Ocean lover, mountain biker, trail runner and yoga teacher. When I'm
+          Water woman, mountain biker, trail runner and yoga teacher. When I'm
           not outside, I'm an active member of Climate Action Tech, Women in
           Tech Christchurch and a volunteer Surf Life Guard at Taylors Mistake
           Surf Life Saving Club.

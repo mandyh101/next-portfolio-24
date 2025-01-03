@@ -29,7 +29,7 @@ const Availability: React.FC<AvailabilityProps> = ({ isAvailable = true }) => {
           }`}
         />
       </div>
-      <p className="text-xl font-sans font-light">
+      <p className="text-xl font-light">
         <span
           className={`${
             isAvailable ? 'text-aquamarine-400' : 'text-red-400'

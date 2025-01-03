@@ -7,7 +7,7 @@ import SocialLinks from './ui/SocialLinks'
 
 function HeroSpotlight() {
   const headingText: string =
-    'Full-stack web developer, innovator, and ocean lover.'
+    'Full-stack web developer, innovator, and activator.'
   return (
     <section className="pb-8 sm:pb-10 md:pb-12 lg:pb-16 pt-40">
       <div>
@@ -36,8 +36,8 @@ function HeroSpotlight() {
               <span className="sr-only">{headingText}</span>
             </h1>
             <p className="text-center text-mono-grey-300 font-light">
-              Kia ora, I&apos;m Mandy – here to create accessible, elegant, and
-              efficient web applications with a user-centered approach.
+              Kia ora, I&apos;m Mandy – here to create accessible, intentional,
+              and efficient web applications with a user-centered approach.
             </p>
             <SocialLinks />
             <ButtonPrimary
