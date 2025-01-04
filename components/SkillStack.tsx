@@ -1,5 +1,7 @@
+'use client'
 import React from 'react'
-import { Tabs } from './ui/Tabs' // Adjust import path as needed
+import { Tabs } from './ui/Tabs'
+import { motion } from 'framer-motion'
 
 interface Skill {
   name: string
@@ -17,21 +19,21 @@ interface TabContentProps {
 }
 
 const TabContent: React.FC<TabContentProps> = ({ skills }) => (
-  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-3xl mx-auto">
     {skills.map((skill) => (
       <div
         key={skill.name}
-        className="group relative bg-white rounded-lg p-3 shadow-sm 
-                   border border-gray-100 hover:border-sea-green-400 
-                   transition-all duration-300 ease-in-out"
+        className="group relative bg-white rounded-lg p-3 shadow-sm
+                     border border-gray-100 hover:border-sea-green-400
+                     transition-all duration-300 ease-in-out"
       >
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-gray-800">
             {skill.name}
           </span>
           <div
-            className="h-1.5 w-1.5 rounded-full bg-sea-green-400 
-                       group-hover:scale-125 transition-transform"
+            className="h-1.5 w-1.5 rounded-full bg-sea-green-400
+                         group-hover:scale-125 transition-transform"
           />
         </div>
       </div>
@@ -92,17 +94,23 @@ const Skills: React.FC = () => {
 
   return (
     <section className="section-container section-padding relative min-h-[500px]">
-      <h2 className="font-light text-center my-8">
-        My <span className="text-sea-green-800">skill</span> set
-      </h2>
-
-      <Tabs
-        tabs={tabs}
-        containerClassName="mb-4"
-        activeTabClassName="bg-tropical-indigo-500"
-        tabClassName="text-sm font-medium border border-tropical-indigo-400"
-        contentClassName="mt-4"
-      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="font-light text-center my-8">
+          My <span className="text-sea-green-800">skill</span> set
+        </h2>
+        <Tabs
+          tabs={tabs}
+          containerClassName="mb-4"
+          activeTabClassName="bg-tropical-indigo-500"
+          tabClassName="text-sm font-medium border border-tropical-indigo-400"
+          contentClassName="mt-4"
+        />
+      </motion.div>
     </section>
   )
 }
