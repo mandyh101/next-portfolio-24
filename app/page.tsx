@@ -2,6 +2,7 @@ import HeroWave from '@/components/Hero-wave'
 import HeroSpotlight from '@/components/Hero-spotlight'
 import { FloatingNav } from '@/components/ui/FloatingNav'
 import AboutMeGrid from '@/components/AboutMeGrid'
+import WorkingWithMe from '@/components/WorkingWithMe'
 import SkillStack from '@/components/SkillStack'
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         <HeroSpotlight />
         <SkillStack />
-        <AboutMeGrid />
+        <WorkingWithMe />
       </div>
     </main>
   )
