@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 
 interface Skill {
   name: string
-  level?: number
   description?: string
   icon?: React.ReactNode
 }
@@ -44,23 +43,26 @@ const TabContent: React.FC<TabContentProps> = ({ skills }) => (
 const Skills: React.FC = () => {
   const skillCategories: SkillCategories = {
     Technical: [
-      { name: 'ReactJS', level: 90 },
-      { name: 'VueJS', level: 85 },
-      { name: 'TypeScript', level: 88 },
-      { name: 'JavaScript', level: 92 },
-      { name: 'PHP', level: 80 },
-      { name: 'Laravel', level: 82 },
-      { name: 'CSS (Tailwind, Sass)', level: 90 },
-      { name: 'HTML', level: 95 },
-      { name: 'Figma', level: 85 },
-      { name: 'Tailwind', level: 92 },
+      { name: 'ReactJS' },
+      { name: 'VueJS' },
+      { name: 'TypeScript' },
+      { name: 'JavaScript' },
+      { name: 'PHP' },
+      { name: 'Laravel' },
+      { name: 'CSS (Tailwind, Sass)' },
+      { name: 'HTML' },
+      { name: 'Figma' },
+      { name: 'Tailwind' },
     ],
     Human: [
-      { name: 'Excellent communicator', level: 90 },
-      { name: 'Go-getter', level: 85 },
-      { name: 'Change agent', level: 92 },
-      { name: 'Systems thinking', level: 92 },
-      { name: 'Agile project management', level: 92 },
+      { name: 'Communication' },
+      { name: 'Ideation' },
+      { name: 'Activation' },
+      { name: 'Responsibility' },
+      { name: 'Systems thinking' },
+      { name: 'Project leadership' },
+      { name: 'Empathy' },
+      { name: 'Stakeholder management' },
     ],
     Learning: [
       {
@@ -94,23 +96,16 @@ const Skills: React.FC = () => {
 
   return (
     <section className="section-container section-padding relative min-h-[500px]">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="font-light text-center my-8">
-          My <span className="text-sea-green-800">skill</span> set
-        </h2>
-        <Tabs
-          tabs={tabs}
-          containerClassName="mb-4"
-          activeTabClassName="bg-tropical-indigo-500"
-          tabClassName="text-sm font-medium border border-tropical-indigo-400"
-          contentClassName="mt-4"
-        />
-      </motion.div>
+      <h2 className="font-light text-center my-8">
+        My <span className="text-sea-green-800">skill</span> set
+      </h2>
+      <Tabs
+        tabs={tabs}
+        containerClassName="mb-4"
+        activeTabClassName="bg-tropical-indigo-500 hover:-translate-y-1 hover:bg-tropical-indigo-600 transform transition duration-500 hover:shadow-sm active:bg-tropical-indigo-700"
+        tabClassName="text-sm font-medium border border-tropical-indigo-400 hover:-translate-y-1 hover:bg-tropical-indigo-600 transform transition duration-500 hover:shadow-sm active:bg-tropical-indigo-700"
+        contentClassName="mt-4"
+      />
     </section>
   )
 }
