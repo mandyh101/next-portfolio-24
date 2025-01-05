@@ -92,11 +92,11 @@ const WorkingWithMe: React.FC<AvailabilityProps> = ({ isAvailable = true }) => {
             </p>
             <p className="font-light">
               My approach is built on three core values: challenge,
-              collaboration and communication. I thrive on challenge - complex
-              problems as opportunities for growth and new approaches. I believe
-              good teamwork is essential for innovation, so collaboration and
+              collaboration and communication. I thrive on challenge; complex
+              problems are opportunities for growth and new approaches. I
+              believe good teamwork is key for innovation, so collaboration and
               supporting colleagues to achieve shared goals is important to me.
-              And I prioritise clear communication to support alignment between
+              I prioritise clear communication to support alignment between
               goals, expectations and outcomes through active listening,
               documentation, and establishing feedback loops with clients and
               stakeholders.
