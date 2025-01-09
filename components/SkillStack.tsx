@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { Tabs } from './ui/Tabs'
-import { motion } from 'framer-motion'
 
 interface Skill {
   name: string
@@ -101,7 +100,7 @@ const Skills: React.FC = () => {
       </h2>
       <Tabs
         tabs={tabs}
-        containerClassName="mb-4"
+        containerClassName="mb-4 z-10"
         activeTabClassName="bg-tropical-indigo-500 hover:-translate-y-1 hover:bg-tropical-indigo-600 transform transition duration-500 hover:shadow-sm active:bg-tropical-indigo-700"
         tabClassName="text-sm font-medium border border-tropical-indigo-400 hover:-translate-y-1 hover:bg-tropical-indigo-600 transform transition duration-500 hover:shadow-sm active:bg-tropical-indigo-700"
         contentClassName="mt-4"
