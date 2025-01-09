@@ -12,18 +12,7 @@ const WorkingWithMe: React.FC<AvailabilityProps> = ({ isAvailable = true }) => {
   const y = useTransform(scrollYProgress, [0, 1], [0, 300])
   return (
     <section className="section-container section-padding relative min-h-screen overflow-hidden">
-      {/* Parallax Image */}
-      <motion.div
-        className="absolute left-0 top-0 w-1/2 overflow-hidden rounded-sm"
-        style={{ y }}
-      >
-        <img
-          src="/images/mandysurfs.jpg"
-          alt=""
-          className="object-cover w-full h-full"
-        />
-      </motion.div>
-      <div className="relative ml-auto p-4 w-3/4 bg-seasalt-white/60 backdrop-blur-sm min-h-screen">
+      <div className="relative ml-auto p-4 md:w-3/4 bg-seasalt-white/60 backdrop-blur-sm min-h-screen z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,6 +101,46 @@ const WorkingWithMe: React.FC<AvailabilityProps> = ({ isAvailable = true }) => {
           </motion.div>
         </motion.div>
       </div>
+      {/* Desktop parallax Image */}
+      <motion.div
+        className="hidden md:block absolute md:left-0 md:top-0 w-1/2 overflow-hidden rounded-sm"
+        style={{ y }}
+      >
+        <div className="aspect-[4/3]">
+          <Image
+            src="/images/mandysurfs.jpg"
+            alt="Mandy surfing"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+          />
+        </div>
+      </motion.div>
+      {/* Mobile image fade */}
+      <motion.div
+        className="block md:hidden overflow-hidden rounded-sm w-full"
+        initial={{ opacity: 0, y: 100 }} // Start 100px below and invisible
+        whileInView={{ opacity: 1, y: 0 }} // Move to natural position and fade in
+        transition={{
+          duration: 0.7, // Slightly longer duration for smoother motion
+          ease: 'easeOut', // Add easing for more natural movement
+        }}
+      >
+        <Image
+          src="/images/mandysurfs.jpg"
+          style={{
+            objectFit: 'cover',
+            position: 'relative',
+            width: '100%',
+            height: 'auto',
+            aspectRatio: '4/3',
+          }}
+          alt="Mandy surfing"
+          width={1000}
+          height={750}
+          priority
+        />
+      </motion.div>
     </section>
   )
 }
