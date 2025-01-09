@@ -1,4 +1,6 @@
+'use client'
 import React from 'react'
+import { motion } from 'framer-motion'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import ButtonPrimary from './ui/ButtonPrimary'
@@ -35,10 +37,21 @@ function HeroSpotlight() {
               </span>
               <span className="sr-only">{headingText}</span>
             </h1>
-            <p className="text-center text-mono-grey-300 font-light">
-              Kia ora, I&apos;m Mandy – here to create accessible, intentional,
-              and efficient web applications with a user-centered approach.
-            </p>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 1.5,
+                delay: 1,
+                ease: 'easeIn',
+              }}
+            >
+              <p className="text-center text-mono-grey-300 font-light">
+                Kia ora, I&apos;m Mandy – here to create accessible,
+                intentional, and efficient web applications with a user-centered
+                approach.
+              </p>
+            </motion.div>
             <SocialLinks />
             <ButtonPrimary
               title="Learn more"
